@@ -8,7 +8,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["vendor/jquery-2.2.0.min.js", "core/content.js"]
+      "js": ["core/content.js"]
     }
   ],
   "browser_action": {
