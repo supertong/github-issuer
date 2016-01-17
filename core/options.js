@@ -6,8 +6,17 @@ function saveOptions() {
   })
 }
 
+function showTokens() {
+  chrome.storage.sync.get('token', function(item) {
+    document.querySelector('#token').value = item.token;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#save').addEventListener('click', saveOptions);
+
+  // show tokens in input field
+  showTokens();
 })
 
 

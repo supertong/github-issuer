@@ -3,7 +3,8 @@
   "name": "My Cool Extension",
   "version": "0.1",
   "permissions": [
-    "storage"
+    "storage",
+    "https://api.github.com/"
   ],
   "content_scripts": [
     {
@@ -12,10 +13,14 @@
     }
   ],
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.png",
+    "default_popup": "templates/popup.html"
   },
   "background": {
     "scripts": ["core/background.js"]
   },
-  "options_page": "templates/options.html"
+  "options_ui": {
+    "page": "templates/options.html",
+    "chrome_style": true
+  }
 }
