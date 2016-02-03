@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Inserting data into html list
       for (let i = 0; i < data.length; i++) {
         let listItem = document.createElement('li');
-        listItem.innerHTML=`${data[i].title} <button class="button" id="clipcopy${i}" data-clipboard-text="${data[i].url}">Copy link</button>`;
+        listItem.innerHTML=`${data[i].title} <button class="button" id="clipcopy${i}" data-clipboard-text="${data[i].html_url}">Copy link</button>`;
 
         let clipboard = new Clipboard(`#clipcopy${i}`);
 
