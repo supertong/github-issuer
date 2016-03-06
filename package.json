@@ -1,0 +1,40 @@
+{
+  "name": "github-issuer",
+  "version": "1.0.0",
+  "description": "Issues: 1.  Is it unsecure to store user's github token in localStorage? What should I do? From [offical document](https://developer.chrome.com/apps/storage) > Confidential user information should not be stored! The storage area isn't encrypted.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supertong/github-issuer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supertong/github-issuer/issues"
+  },
+  "homepage": "https://github.com/supertong/github-issuer#readme",
+  "engines": {
+    "node": "~5.7.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-react": "^3.1.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-util": "^3.0.7",
+    "react": "^0.14.7",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "clipboard": "^1.5.9",
+    "lodash": "^4.6.1",
+    "react-zeroclipboard": "^3.0.0",
+    "whatwg-fetch": "^0.11.0"
+  }
+}
