@@ -12,7 +12,7 @@ const Popup = React.createClass({
     };
   },
   componentDidMount: function() {
-    api.retriveIssues(this.props.apiToken, function(err, data) {
+    api.retriveIssues(this.props.apiToken, this.props.repos, function(err, data) {
       console.log(data);
       this.setState({
         issueData: data
@@ -40,10 +40,11 @@ const Popup = React.createClass({
   }
 });
 
-chrome.storage.sync.get('token', function(item) {
+chrome.storage.sync.get('options', function(item) {
   if (typeof item === 'undefined') {
-    console.log('No token found!!!!');
+    console.log('No options found!!!!');
   }
-  const token = item.token;
-  ReactDom.render(<Popup apiToken={token}/>, document.querySelector('#popup-content'));
+  const token = item.options.token;
+  const repos = item.options.repos;
+  ReactDom.render(<Popup apiToken={token} repos={repos}/>, document.querySelector('#popup-content'));
 });

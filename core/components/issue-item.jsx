@@ -20,7 +20,7 @@ module.exports = React.createClass({
             </button>
           </div>
         </div>
-              </li>
+      </li>
     );
   }
 });

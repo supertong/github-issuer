@@ -1,7 +1,7 @@
 const React = require('react');
 const IssueItem = require('./issue-item');
 
-module.exports = IssueList = React.createClass({
+module.exports = React.createClass({
   render: function() {
     var list = [];
     this.props.issueData.forEach(function(issue) {
